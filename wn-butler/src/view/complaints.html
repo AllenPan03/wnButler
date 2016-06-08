@@ -1,0 +1,109 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection” content=”telphone=no, email=no" />
+    <title>屋牛管家</title>
+
+    <link rel="stylesheet" href="../scss/repair.css">
+    <!--所有页面共用JS文件-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/flexible.js"></script>
+    <script src="../js/dialog.js"></script>
+    <!--当前页面所用JS文件-->
+    <script src="../js/wn_amazeui.min.js"></script>
+    <script>
+        $(function(){
+            //选择框
+            $(".choose_item span").on("click",function(){
+                var selected = "&#xe60c";
+                var unselected = "&#xe60b";
+                $(".choose_item i").html(unselected);
+                $(this).find("i").html(selected);
+            })
+            $(".submit_btn").click(function(){
+                autoclosedialog("感谢您选择屋牛家装！","我们将在1~3个工作日内完成信息校对","请保持手机畅通")
+            })
+        })
+    </script>
+</head>
+<body>
+<!-- 页面内容 -->
+<div id="wrap">
+    <div class="head fz17 fb">
+        <a href="javascript:;" class="return_back">
+            <i class="iconfont fz28">&#xe601</i>
+        </a>
+        我的屋牛住宅
+        <a href="javascript:;" class="add_btn">
+            <i class="iconfont fz32">&#xe600</i>
+        </a>
+    </div>
+    <div class="mt20 mb78">
+        <form id="" action="#" method="post">
+            <div class="white pl36 topline_d btmline_d">
+                <div class="btmline_l li_item pr36">
+                    <span class="fl">联系人：奥斯卡</span>
+                    <a class="fr"><span>1815659813</span><i class="iconfont green fz28 fr">&#xe60a</i></a>
+                </div>
+                <div class="li_item">
+                    杭州余杭区翡翠城 305幢4单元502室
+                </div>
+            </div>
+            <div class="choose_item li_item pl36">
+                <ul>
+                    <li>请选择：
+                        <span>
+                            <input type="hidden" value="投诉" name="">
+                            <i class="iconfont fz20 mr5">&#xe60b</i>投诉
+                        </span>
+                        <span class="selected">
+                            <input type="hidden" value="表扬" name="">
+                            <i class="iconfont fz20 mr5">&#xe60c</i>表扬
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="li_item pl36">
+                您的认可是屋牛全体最大的动力！
+            </div>
+            <div class=" pl36 pr36">
+                <div class="split_line_d"></div>
+            </div>
+            <div class="pl36 ins_img">
+                <p class="li_item">有图有真相，拍张照片吧：</p>
+                <img onclick="chooseImage()" src="../img/img_addbg.png" >
+                <ul class="am-no-layout cls" data-am-widget="gallery" data-am-gallery="{ pureview: true }">
+                    <li>
+                        <img src="../img/hydropower_02.jpg">
+                    </li>
+                    <li>
+                        <img src="../img/hydropower_02.jpg">
+                    </li>
+                    <li>
+                        <img src="../img/hydropower_02.jpg">
+                    </li>
+                    <li>
+                        <img src="../img/hydropower_02.jpg">
+                    </li>
+                    <li>
+                        <img src="../img/hydropower_02.jpg">
+                    </li>
+                </ul>
+            </div >
+            <div class="pl36">
+                <textarea class="area-txt fz14" placeholder="请简单描述一下您所遇到的问题，以便我们尽快为您解决，感谢你的信任与配合。"></textarea>
+            </div>
+            <button type="button" class="submit_btn fz17 fb " onclick="">确认保修</button>
+        </form>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEE,UAAiB,CACf,gBAAgB,CAAE,uBAA6B,CAC/C,MAAM,CAAE,cAAgB,CACxB,MAAM,CALkB,OAAO,CAEjC,cAAiB,CACf,gBAAgB,CAAE,2BAA6B,CAC/C,MAAM,CAAE,cAAgB,CACxB,MAAM,CAL4C,OAAO,CAE3D,WAAiB,CACf,gBAAgB,CAAE,wBAA6B,CAC/C,MAAM,CAAE,cAAgB,CACxB,MAAM,CALoE,IAAI",
+"sources": ["../sass/test.scss"],
+"names": [],
+"file": "test.css"
+}

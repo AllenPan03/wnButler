@@ -1,0 +1,22 @@
+{
+    "comments": [
+    {
+        "content": "很不错嘛",
+        "id": 1,
+        "nickname": "纳尼"
+    },
+    {
+        "content": "哟西哟西",
+        "id": 2,
+        "nickname": "小强"
+    }
+],
+    "content": "你是木头人，哈哈。",
+    "infomap":
+    {
+    "性别": "男",
+    "职业": "程序员",
+    "博客": "http:\/\/www.cnblogs.com\/codeplus\/"
+    },
+    "title": "123木头人"
+}

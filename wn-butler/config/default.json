@@ -1,0 +1,57 @@
+{
+    "domain": "wuniu.com",
+    "is_debug": true,
+    "mongodb": {
+        "host": "127.0.0.1",
+        "port": "27017",
+        "db": "node-webot"
+    },
+    "sms": {
+        "host": "127.0.0.1",
+        "port": "8081"
+    },
+    "wx": {
+        "app_id": "wx9f6f40bd985a5e6d",
+        "app_secret": "dcc0a420c3678fab1b16fe56c24d2890",
+        "appToken": "allenpan",
+        "wx_menu": {
+            "button": [
+                {
+                    "type": "view",
+                    "name": "我的家",
+                    "url": "http://panjunlin.ngrok.wuniu.com/view/login.html"
+                },
+                {
+                    "name": "智能硬件",
+                    "sub_button": [
+                        {
+                            "type": "view",
+                            "name": "智能监控",
+                            "url": "http://panjunlin.ngrok.wuniu.com/view/repair.html"
+                        },
+                        {
+                            "type": "view",
+                            "name": "智能窗帘",
+                            "url": "http://panjunlin.ngrok.wuniu.com/view/design_chart.html"
+                        }
+                    ]
+                },
+                {
+                    "name": "更多",
+                    "sub_button": [
+                        {
+                            "type": "view",
+                            "name": "更多1",
+                            "url": "http://ip:port/all"
+                        },
+                        {
+                            "type": "view",
+                            "name": "更多2",
+                            "url": "http://ip:port/all"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

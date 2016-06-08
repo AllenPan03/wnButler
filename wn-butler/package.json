@@ -1,0 +1,25 @@
+{
+  "name": "wu-butle",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "scripts": {
+    "start": "npm publish .",
+    "test": "node_modules/.bin/supervisor index.js"
+  },
+  "dependencies": {
+    "async": "^0.9.0",
+    "bufferhelper": "^0.2.0",
+    "iconv-lite": "^0.4.8",
+    "request": "^2.55.0",
+    "wechat": "*",
+    "wx_jsapi_sign": "*"
+  },
+  "devDependencies": {
+    "art-template": "^3.0.3",
+    "express": "^3.0.6",
+    "supervisor": "^0.6.0",
+    "wechat-api": "^1.28.0"
+  }
+}

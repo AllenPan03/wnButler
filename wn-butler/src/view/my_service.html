@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>屋牛管家</title>
+
+    <link rel="stylesheet" href="../scss/service.css">
+    <!--所有页面共用JS文件-->
+    <script src="../js/jquery.min.js"></script>
+    <script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/flexible.js"></script>
+    <script src="../js/dialog.js"></script>
+    <!--当前页面所用JS文件-->
+    <script>
+        $(function(){
+            $(".ser_btn").on("click","a",function(){
+                var index = $(this).index()-1;
+                $(this).addClass("now").siblings().removeClass("now");
+                $(".ser_btn").find("i").html("&#xe60d");
+                $(this).find("i").html("&#xe60e");
+                $(".serviceBox ul").eq(index).show().siblings().hide();
+            })
+        })
+    </script>
+</head>
+<body>
+<!-- 页面内容 -->
+<div id="wrap">
+    <div class="head fz17 fb">
+        <a href="javascript:;" class="return_back">
+            <i class="iconfont fz28">&#xe601</i>
+        </a>
+        我的服务
+        <a href="javascript:;" class="add_btn">
+            <i class="iconfont fz32">&#xe600</i>
+        </a>
+    </div>
+    <div class="ser_btn height_75 white btmline_d">
+        <div class="line"></div>
+        <a href="#" class="tc now"><i class="iconfont fz24 fl mr5">&#xe60e</i> <span class="fl">待处理</span></a>
+        <a href="#" class="tc"><i class="iconfont fz24 fl mr5">&#xe60d</i><span class="fl">已处理</span></a>
+    </div>
+    <div class="serviceBox mt04">
+        <ul class="mt04 designBox_ul" style="display: block">
+            <div class="topline_d btmline_d pl36 white">
+                <div class="height_75 btmline_l">
+                     <span><i class="iconfont yellow fz20 mr5">&#xe60f</i>硬件维修</span>
+                     <span class="ml10 grayB">|</span>
+                     <span class="ml10 grayB">5天前  2016/3/15</span>
+                     <span class="fr pr36">待处理</span>
+                </div>
+                <div class="height_75 grayB pl36">
+                    我家墙纸隆起来了（问题描述）
+                </div>
+                <div class="height_75 pl36">
+                    <a href="#" class="evaluate_btn">评价</a>
+                </div>
+            </div>
+            <div class="topline_d btmline_d mt23 pl36 white">
+                <div class="height_75 btmline_l">
+                    <span><i class="iconfont yellow fz20 mr5">&#xe610</i>设备故障</span>
+                    <span class="ml10 grayB">|</span>
+                    <span class="ml10 grayB">5天前  2016/3/15</span>
+                    <span class="fr pr36">待处理</span>
+                </div>
+                <div class="height_75 grayB pl36">
+                    我家墙纸隆起来了（问题描述）
+                </div>
+                <div class="height_75 pl36">
+                    <a href="#" class="evaluate_btn">评价</a>
+                </div>
+            </div>
+        </ul>
+        <ul class="mt04 designBox_ul">
+            <div class="topline_d btmline_d pl36 white">
+                <div class="height_75 btmline_l">
+                    <span><i class="iconfont yellow fz20 mr5">&#xe60f</i>硬件维修</span>
+                    <span class="ml10 grayB">|</span>
+                    <span class="ml10 grayB">5天前  2016/3/15</span>
+                    <span class="fr pr36">已处理</span>
+                </div>
+                <div class="height_75 grayB pl36">
+                    我家墙纸隆起来了（问题描述）
+                </div>
+                <div class="height_75 pl36">
+                    <span>综合评分：</span>
+                    <span>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                    </span>
+                </div>
+            </div>
+            <div class="topline_d btmline_d mt23 pl36 white">
+                <div class="height_75 btmline_l">
+                    <span><i class="iconfont yellow fz20 mr5">&#xe610</i>设备故障</span>
+                    <span class="ml10 grayB">|</span>
+                    <span class="ml10 grayB">5天前  2016/3/15</span>
+                    <span class="fr pr36">已处理</span>
+                </div>
+                <div class="height_75 grayB pl36">
+                    我家墙纸隆起来了（问题描述）
+                </div>
+                <div class="height_75 pl36">
+                    <span>综合评分：</span>
+                    <span>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                        <i class="iconfont yellow fz20">&#xe602</i>
+                    </span>
+                </div>
+            </div>
+        </ul>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

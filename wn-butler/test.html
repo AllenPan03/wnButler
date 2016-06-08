@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="src/js/jquery.min.js"></script>
+    <script>
+        function test() {
+            $.getJSON('test.json',function(data){
+                $("#title").append("<h1>"+data.title+"</h1>");
+                $("#content").append("<h2>"+data.content+"</h2>");
+                //解析map数据
+                $.each(data.infomap,function(value,key){
+                    $("#mapinfo").append("<label>"+value+"</label>-----<span>"+key+"</span><br><hr>")
+                })
+                //解析数组
+                $.each(data.comments,function(i,item){
+                    $("#info").append(
+                           item.id+ "<br><hr>"+
+                           item.nickname+ "<br><hr>"+
+                           item.content+ "<br><hr>"
+
+                    )
+                })
+
+            })
+        }
+    </script>
+</head>
+
+<body>
+<button onclick="test();">获取</button>
+<div id="title"></div>
+<div id="mapinfo"></div>
+<div id="content"></div>
+<div id="info"></div>
+</body>
+</html>
