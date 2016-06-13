@@ -1,5 +1,5 @@
 {
-    "domain": "wuniu.com",
+    "domain": "panjunlin.ngrok.wuniu.com",
     "is_debug": true,
     "mongodb": {
         "host": "127.0.0.1",
@@ -19,19 +19,24 @@
                 {
                     "type": "view",
                     "name": "我的家",
-                    "url": "http://panjunlin.ngrok.wuniu.com/view/login.html"
+                    "url": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9f6f40bd985a5e6d&redirect_uri=http%3A%2F%2Fwww.panjunlin.ngrok.wuniu.com%callback&response_type=code&scope=snsapi_userinfo&state=derocate#wechat_redirect"
                 },
                 {
                     "name": "智能硬件",
                     "sub_button": [
                         {
                             "type": "view",
-                            "name": "智能监控",
+                            "name": "视频介绍",
                             "url": "http://panjunlin.ngrok.wuniu.com/view/repair.html"
                         },
                         {
                             "type": "view",
-                            "name": "智能窗帘",
+                            "name": "安装说明",
+                            "url": "http://panjunlin.ngrok.wuniu.com/view/repair.html"
+                        },
+                        {
+                            "type": "view",
+                            "name": "添加设备",
                             "url": "http://panjunlin.ngrok.wuniu.com/view/design_chart.html"
                         }
                     ]

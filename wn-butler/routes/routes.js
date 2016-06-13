@@ -5,13 +5,11 @@ var path = require('path');
 var signature = require('../signature');
 var config = require('../config/config')();
 
-
 var createSignature = signature.getSignature(config);
 
 module.exports = function(app) {
     app.post('/allen', getSignature);
     app.get('/allen', fun);
-
 };
 
 function fun(req, res) {

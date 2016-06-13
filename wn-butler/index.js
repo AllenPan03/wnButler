@@ -11,6 +11,7 @@ var template = require('art-template');//此处基本无用
 var config = require('./config/config')();
 var signature = require('./signature');
 var wechatMenu = require('./wechatMenu');
+var OAuth  = require('./routes/weixin');
 //var write = require('../lib/writeFile.js');
 //console.log(config);
 
@@ -43,6 +44,7 @@ app.configure('development', function() {
 //console.log(signature);
 
 routes(app);
+OAuth(app);
 
 http.createServer(app).listen(app.get('port'), function() {
     console.log("Express server listening on port " + app.get('port'));

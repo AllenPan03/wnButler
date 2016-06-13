@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "art-template": "^3.0.3",
-    "express": "^3.0.6",
+    "express": "^4.2.0",
     "supervisor": "^0.6.0",
     "wechat-api": "^1.28.0"
   }
