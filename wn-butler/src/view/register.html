@@ -6,7 +6,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>屋牛管家</title>
+    <title>屋牛管家<%= title %></title>
 
     <link rel="stylesheet" href="../scss/login.css">
     <!--所有页面共用JS文件-->
@@ -16,12 +16,12 @@
     <!--当前页面所用JS文件-->
     <script>
         $(function(){
-            $(".big_btn").click(function(){
-                autoclosedialog("感谢您选择屋牛家装！","我们将在1~3个工作日内完成信息校对","请保持手机畅通")
-            })
-            $("#delete_btn").click(function(){
-                confirmdialog("确定要删除您的住址？")
-            })
+//            $(".big_btn").click(function(){
+//                autoclosedialog("感谢您选择屋牛家装！","我们将在1~3个工作日内完成信息校对","请保持手机畅通")
+//            })
+//            $("#delete_btn").click(function(){
+//                confirmdialog("确定要删除您的住址？")
+//            })
         })
     </script>
     <Script>
@@ -90,6 +90,7 @@
          })
      }
     </script>
+
 </head>
 <body>
 <!-- 页面内容 -->
@@ -98,7 +99,7 @@
         <a href="javascript:;" class="return_back">
             <i class="iconfont fz28">&#xe601</i>
         </a>
-        我的屋牛住宅
+        <%= title %> 的屋牛住宅
         <a href="javascript:;" class="add_btn">
             <i class="iconfont fz32">&#xe600</i>
         </a>
@@ -110,20 +111,51 @@
                     <input type="text" id="username" name="username" class="fz14 re_txt icon_user li_item" placeholder="请输入业主姓名"/>
                 </div>
                 <div class="btmline_l">
-                    <input type="text" id="handPhone" name="handphone" class="fz14 re_txt icon_phone li_item" placeholder="请填写手机号"/>
+                    <input type="text" id="handphone" name="handphone" class="fz14 re_txt icon_phone li_item" placeholder="请填写手机号"/>
                 </div>
                 <div class="yanz">
                     <input type="text" id="telCode" name="telCode" class="fz14 re_txt icon_speaker li_item" placeholder="请输入验证码"/>
                     <a id="getcode" class="yanz_btn" onclick="validata();" href="javascript:;">获取验证码</a>
                 </div>
             </div>
-            <button type="button" class="submit_btn fz17 fb" onclick="login()">确 认</button>
+            <button type="button" class="submit_btn fz17 fb" id="login">确 认</button>
         </form>
     </div>
 
 
 </div>
 
-
+<script type="text/javascript">
+    $(function(){
+        $("#login").click(function(){
+            var username = $("#username").val();
+            var handphone = $("#handphone").val();
+            function GetQueryString(name)
+            {
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if(r!=null)return  unescape(r[2]); return null;
+            }
+            var wechatId = GetQueryString("wechat_id");// 通过URL获取到openid
+            var data = {"uname":username,"uphone":handphone,"wechatId":wechatId};
+            $.ajax({
+                url:'/register',
+                type:'post',
+                data: data,
+                success: function(data,status){
+                    if(status == 'success'){
+                        location.href = 'index';
+                    }
+                },
+                error: function(data,status){
+                    if(status == 'error'){
+                       // location.href = 'login';
+                        console.log("报错!!!")
+                    }
+                }
+            });
+        });
+    });
+</script>
 </body>
 </html>

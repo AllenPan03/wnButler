@@ -8,15 +8,15 @@ var config = require('../config/config')();
 var createSignature = signature.getSignature(config);
 
 module.exports = function(app) {
-    app.post('/allen', getSignature);
-    app.get('/allen', fun);
+    app.post('/echo', getSignature);
+    app.get('/echo', fun);
 };
 
 function fun(req, res) {
     var u = req.protocol + "://" + req.get('Host') + req.url;
     createSignature(u, function(error, result) {
         console.log(result);
-        res.render('../view/test.html', result);
+        res.render('../src/view/test.html', result);
     });
 }
 
