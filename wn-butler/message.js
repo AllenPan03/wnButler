@@ -6,7 +6,6 @@ var webot = require('weixin-robot');
 
 
 
-
 function getMessage(req, res) {
     console.log("这是一个文本回复");
     webot.set('hi', '你好');
@@ -70,5 +69,5 @@ function getMessage(req, res) {
 //    //}
 //}));
 module.exports = function(app) {
-    app.post('/echo', getMessage);
+    //app.post('/echo', getMessage);
 };

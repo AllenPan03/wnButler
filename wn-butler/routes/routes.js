@@ -7,8 +7,8 @@ var config = require('../config/config')();
 var createSignature = signature.getSignature(config);
 
 module.exports = function(app) {
-    app.post('/echo', getSignature);
-    app.get('/echo', fun);
+      app.post('/echo', getSignature);
+    //app.get('/echo', fun);
 };
 
 function fun(req, res) {
@@ -22,7 +22,7 @@ function fun(req, res) {
 
 function getSignature(req, res) {
     var url = req.body.url;
-    console.log("bbbbbbbbbbbbbbbbbbbbbb");
+    console.log("bbbbbbbbbbbbbbbbbbb");
     createSignature(url, function(error, result) {
         if (error) {
             res.json({

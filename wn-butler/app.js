@@ -16,7 +16,7 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var mongoose = require('mongoose');
 var session = require('express-session');
-//var message = require('./message');
+var message = require('./message');
 var route = require('./routes/index');
 //console.log(config);
 
@@ -65,7 +65,7 @@ for(var i in file){
     var name = file[i].replace('.js','');
     app.use('/'+name,require('./routes/' +name));
 }
-//message(app);
+message(app);
 routes(app);
 OAuth(app);
 //微信将很多事件推送到此接口上
