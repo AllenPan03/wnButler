@@ -4,7 +4,7 @@
     "mongodb": {
         "host": "127.0.0.1",
         "port": "27017",
-        "db": "node-webot"
+        "db": "wnButler"
     },
     "sms": {
         "host": "127.0.0.1",
@@ -47,12 +47,12 @@
                         {
                             "type": "view",
                             "name": "更多1",
-                            "url": "http://panjunlin.ngrok.wuniu.com/view/test.html"
+                            "url": "http://panjunlin.ngrok.wuniu.com/view/jiekou.html"
                         },
                         {
                             "type": "view",
-                            "name": "更多2",
-                            "url": "http://ip:port/all"
+                            "name": "评论",
+                            "url": "http://panjunlin.ngrok.wuniu.com/evaluate"
                         }
                     ]
                 }

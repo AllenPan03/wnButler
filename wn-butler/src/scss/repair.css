@@ -1273,7 +1273,7 @@ ADDRESS {
 
 #doPoint SPAN {
   display: block;
-  background-image: url(../../src/img/star_small.png);
+  background-image: url(../img/star_small.png);
   background-repeat: no-repeat;
   height: 1rem;
   width: 8rem;

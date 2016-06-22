@@ -4,7 +4,6 @@
 var path = require('path');
 var signature = require('../signature');
 var config = require('../config/config')();
-
 var createSignature = signature.getSignature(config);
 
 module.exports = function(app) {
@@ -15,14 +14,15 @@ module.exports = function(app) {
 function fun(req, res) {
     var u = req.protocol + "://" + req.get('Host') + req.url;
     createSignature(u, function(error, result) {
+        console.log("aaa");
         console.log(result);
-        res.render('../src/view/test.html', result);
+        res.render('../view/index.html', result);
     });
 }
 
 function getSignature(req, res) {
     var url = req.body.url;
-    console.log("bbb");
+    console.log("bbbbbbbbbbbbbbbbbbbbbb");
     createSignature(url, function(error, result) {
         if (error) {
             res.json({

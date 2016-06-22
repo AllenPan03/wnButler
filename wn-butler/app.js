@@ -5,6 +5,7 @@ var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var fs = require('fs');
+var routes = require('./routes/routes');
 //var template = require('art-template');//此处基本无用
 var config = require('./config/config')();
 var wechatMenu = require('./wechatMenu');
@@ -15,8 +16,8 @@ var bodyParser = require('body-parser');
 var multer = require('multer');
 var mongoose = require('mongoose');
 var session = require('express-session');
-//var routes = express.Router();
-var routes = require('./routes/index');
+//var message = require('./message');
+var route = require('./routes/index');
 //console.log(config);
 
 global.dbHandel = require('./database/dbHandel');
@@ -52,9 +53,7 @@ app.use(function(req,res,next){
     next();   //中间件传递
 });
 
-
-
-app.use('/', routes);  // 即为为路径 / 设置路由
+app.use('/', route);  // 即为为路径 / 设置路由
 //app.use('/users', users); // 即为为路径 /users 设置路由
 //app.use('/login',require('./routes/login')); // 即为为路径 /login 设置路由
 //app.use('/register',routes); // 即为为路径 /register 设置路由
@@ -66,31 +65,8 @@ for(var i in file){
     var name = file[i].replace('.js','');
     app.use('/'+name,require('./routes/' +name));
 }
-
-//app.configure(function() {
-//
-//    app.set('port', process.env.PORT || 8081);
-//    template.config('base', '');
-//    template.config('extname', '.html');
-//    app.engine('.html', template.__express);
-//    app.set('view engine', 'html');
-//    app.use(express.favicon());
-//    app.use(express.logger('dev'));
-//    app.use(express.bodyParser());
-//    app.use(express.methodOverride());
-//    app.use(app.router);
-//    app.use(express.static(path.join(__dirname, 'src')));
-//    app.get('/', function (req, res) {
-//        res.send('Hello World');
-//    });
-//
-//});
-
-//app.configure('development', function() {
-//    app.use(express.errorHandler());
-//});
-
-
+//message(app);
+routes(app);
 OAuth(app);
 //微信将很多事件推送到此接口上
 app.get('/echo', function(req, res, next) {

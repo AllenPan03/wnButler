@@ -1,9 +1,9 @@
 {
   "name": "wu-butle",
   "version": "1.0.3",
-  "description": "",
-  "main": "index.js",
-  "author": "",
+  "description": "屋牛管家公众号",
+  "main": "www",
+  "author": "panjunlin",
   "scripts": {
     "start": "node ./bin/www",
     "test": "node_modules/.bin/supervisor index.js"
@@ -21,7 +21,8 @@
     "ejs": "~2.3.1",
     "express": "~4.12.2",
     "morgan": "~1.5.1",
-    "serve-favicon": "~2.2.0"
+    "serve-favicon": "~2.2.0",
+    "weixin-robot": "~0.5.0"
   },
   "devDependencies": {
     "art-template": "^3.0.3",

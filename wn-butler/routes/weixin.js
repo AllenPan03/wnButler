@@ -4,7 +4,7 @@
 // 微信授权和回调
 var express = require('express');
 var app = express();
-var router = express.Router();
+var routes = require('./routes');
 var OAuth = require('wechat-oauth');
 var fs = require('fs');
 var config  = fs.readFileSync('./config/default.json');
@@ -60,10 +60,11 @@ function ccc(req, res) {
                 console.log(err);
             }else if(doc){
                 console.log("用户已存在！");
+                console.log(doc);
+                req.session.user_info = doc;
                 res.redirect('index');
             }else{
                 res.redirect('register?wechat_id='+openid);
-
                 //res.render(wechat_id:openid);
                 //User.create({ 							// 创建一组user对象置入model
                 //    wechat_id: openid

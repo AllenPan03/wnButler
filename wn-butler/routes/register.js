@@ -38,10 +38,21 @@ router.route("/").get(function(req,res){    // 到达此路径则渲染register�
                     console.log(err);
                     console.log("报错");
                 } else {
+                    console.log(doc);
+                    req.session.user_info = doc;
                     console.log("用户名创建成功！");
                     res.send(200);
                 }
             });
+            //User.findOne({name:uname},function(err,doc){   //通过此model以用户名的条件 查询数据库中的匹配信息
+            //    if(err){ 										//错误就返回给原post处（login.html) 状态码为500的错误
+            //        res.send(500);
+            //        console.log(err);
+            //        }else{ 									//信息匹配成功，则将此对象（匹配到的user) 赋给session.user  并返回成功
+            //            req.session.user_info = doc;
+            //            res.send(200);
+            //        }
+            //});
         }
     });
 });
