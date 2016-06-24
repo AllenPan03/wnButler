@@ -3,10 +3,6 @@ var express = require('express');
 var app = express();
 var webot = require('weixin-robot');
 
-
-
-
-function getMessage(req, res) {
     console.log("这是一个文本回复");
     webot.set('hi', '你好');
     // 指定回复消息
@@ -29,7 +25,7 @@ function getMessage(req, res) {
 // 接管消息请求
     webot.watch(app, { token: wx_token,path:'/echo'});
 
-}
+
 
 //app.use( wechat(config, function (req, res, next) {
 //    // 微信输入信息都在req.weixin上
