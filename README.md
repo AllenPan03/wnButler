@@ -1,4 +1,4 @@
-## pan-workspace
+## 屋牛管家
 
-小潘专用git
+基于nodejs+express+mongoose+wechat开发的微信公众号
 
